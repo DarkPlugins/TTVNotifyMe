@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch TV Notify Me",
+  "short_name": "TTVNotifyMe",
+  "version": "1.0.0",
+  "description": "Monitors selected Creators and notifies you when they go live.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://api.twitch.tv/*"
+  ],
+  "action": {
+    "default_title": "TTVNotifyMe",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "src/img/icon16.png",
+      "32": "src/img/icon32.png",
+      "48": "src/img/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/js/background.js",
+    "type": "module"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "src/img/icon16.png",
+    "32": "src/img/icon32.png",
+    "48": "src/img/icon48.png",
+    "128": "src/img/icon128.png"
+  }
+}

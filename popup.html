@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TTVNotifyMe</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/popup.js" defer></script>
+  </head>
+  <body class="popup">
+    <header>
+      <div>
+        <h1>TTVNotifyMe</h1>
+        <p id="status">Loading…</p>
+      </div>
+      <span id="dot" class="dot"></span>
+    </header>
+
+    <section>
+      <div class="row between">
+        <h2>Creators</h2>
+        <button id="options" class="secondary">Settings</button>
+      </div>
+      <div id="channels" class="channels"></div>
+      <div id="empty" class="empty" hidden>
+        No streamers added yet.<br>
+        Open the settings and add Twitch names.
+      </div>
+    </section>
+
+    <section class="quick">
+      <button id="check" class="primary">Check now</button>
+      <span id="lastCheck">Not checked yet.</span>
+    </section>
+  </body>
+</html>

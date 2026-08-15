@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TTVNotifyMe - Settings</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/options.js" defer></script>
+  </head>
+  <body class="options">
+    <main>
+      <header>
+        <h1>TTVNotifyMe</h1>
+        <p>Monitors selected Creators and notifies you when they go live.</p>
+      </header>
+
+      <section class="card">
+        <h2>Twitch API</h2>
+        <p class="muted">For direct Twitch API requests, you need a Twitch Client ID and an App Access Token. Both are stored locally in Chrome.</p>
+        <label>Client-ID
+          <input id="clientId" type="text" autocomplete="off" spellcheck="false" placeholder="Twitch Client-ID">
+        </label>
+        <label>App Access Token
+          <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="Bearer Token ohne 'Bearer '">
+        </label>
+        <p class="warning">Further instructions on obtaining a client ID and an app access token can be found <a href="https://github.com/DarkPlugins/TTVNotifyMe/blob/main/README.md" target="_blank">here</a>.</p>
+      </section>
+
+      <section class="card">
+        <div class="row between">
+          <h2>Creators</h2>
+          <button id="addExample" class="secondary">Add Examples</button>
+        </div>
+        <textarea id="channels" rows="10" placeholder="Examples:
+  Emiru
+  Shroud
+  xQc
+"></textarea>
+      <section class="card small">
+        <h2>Notice</h2>
+        <p class="muted">
+          Please list only the names of the creators, with one name per line.
+          Do not use any additional characters or separators such as commas or semicolon.
+        </p>
+      </section>
+      </section>
+
+      <section class="card">
+        <h2>Notifications</h2>
+        <label class="check"><input id="notifications" type="checkbox"> Notification when live</label>
+        <label class="check"><input id="openOnClick" type="checkbox"> Clicking the notification opens the stream</label>
+        <label class="check"><input id="autoOpen" type="checkbox"> Automatically open the stream when someone goes live</label>
+        <label class="check"><input id="autoClose" type="checkbox"> Close automatically opened tabs when going offline</label>
+        <label>Inspection interval
+          <select id="interval">
+            <option value="1">1 Minute</option>
+            <option value="2">2 Minutes</option>
+            <option value="5">5 Minutes</option>
+            <option value="10">10 Minutes</option>
+          </select>
+        </label>
+      </section>
+
+      <div class="actions">
+        <button id="save" class="primary">Save</button>
+        <button id="test" class="secondary">Test-Notification</button>
+        <span id="saved"></span>
+      </div>
+    </main>
+  </body>
+</html>
